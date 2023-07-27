@@ -29,9 +29,7 @@ const Home = () => {
                 <p className="text-center text-4xl sm:text-5xl mt-2 ">
                   Frontend Engineer
                 </p>
-                <p className="text-center">
-                  Frontend Engineer in Indonesia
-                </p>
+                <p className="text-center">Frontend Engineer in Indonesia</p>
                 <div className="flex justify-center gap-3 mt-5">
                   <div className="btn bg-gradient-to-r from-one via-two to-three rounded-full text-white font bold transform hover:scale-110 transition-transform duration-500">
                     Get in Touch
@@ -78,7 +76,7 @@ const Home = () => {
 
           <div className="w-full h-16 bg-gradient-to-r from-one via-two to-three flex justify-center items-center ">
             <div className="w-full h-12 bg-white sm:skew-y-1 skew-y-3 flex justify-center items-center text-black font-medium sm:text-3xl text-xl">
-              <p>Front End Engineer ✨ UI / UX Engineer </p>
+              <p>Front End Engineer ✨ UI / UX Engineer</p>
             </div>
           </div>
 
@@ -189,8 +187,15 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+
+              
             </div>
           </div>
+          <div className="w-full h-52 bg-gradient-to-r from-one via-two to-three flex justify-center items-center ">
+                <div className="w-full h-40 bg-white sm:skew-y-2 skew-y-6 flex justify-center items-center text-black font-medium sm:text-3xl text-xl">
+                  <p>Talk Now <span className="btn bg-gradient-to-r from-one via-two to-three">Lets Talk</span></p>
+                </div>
+              </div>
         </div>
       </Layout>
     </div>
