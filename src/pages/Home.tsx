@@ -1,4 +1,3 @@
-import React from "react";
 import Layout from "../component/Layout";
 import Profil1 from "../assets/profil1.png";
 import purple1 from "../assets/3D/Clay_Purple0002.png";
