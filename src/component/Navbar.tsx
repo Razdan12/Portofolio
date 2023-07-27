@@ -1,7 +1,23 @@
+import "./button.css"
+import { useState, useEffect } from 'react';
 const Navbar = () => {
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  
+  const handleDarkModeToggle = () => {
+    const newDarkMode = !isDarkMode;
+    setIsDarkMode(newDarkMode);
+    localStorage.setItem('dark', newDarkMode.toString());
+    window.location.reload();
+  };
+  useEffect(() => {
+    const storedDarkMode = localStorage.getItem('dark');
+    if (storedDarkMode === 'true') {
+      setIsDarkMode(true);
+    }
+  }, []);
+  
   return (
     <div>
-        
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -26,18 +42,18 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-              <a>Home</a>
-            </li>
-            
-            <li>
-              <a>Service</a>
-            </li>
-            <li>
-              <a>Portfolio</a>
-            </li>
-            <li>
-              <a>Contact</a>
-            </li>
+                <a>Home</a>
+              </li>
+
+              <li>
+                <a>Service</a>
+              </li>
+              <li>
+                <a>Portfolio</a>
+              </li>
+              <li>
+                <a>Contact</a>
+              </li>
             </ul>
           </div>
           <a className="btn btn-ghost normal-case text-xl">Cahyo</a>
@@ -47,7 +63,7 @@ const Navbar = () => {
             <li>
               <a>Home</a>
             </li>
-            
+
             <li>
               <a>Service</a>
             </li>
@@ -60,7 +76,13 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn hover:bg-white hover:text-yellow-400 bg-white text-black rounded-full font-medium">Lest's Talk</a>
+          <label className="switch mr-5">
+            <input type="checkbox" checked={isDarkMode} onChange={handleDarkModeToggle}/>
+            <span className="slider"></span>
+          </label>
+          <a className="btn hover:bg-gradient-to-l bg-gradient-to-r from-three via-two to-one rounded-full font-medium">
+            Lest's Talk
+          </a>
         </div>
       </div>
       <p></p>
