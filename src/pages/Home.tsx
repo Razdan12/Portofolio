@@ -29,16 +29,6 @@ const Home = () => {
             <About />
           </div>
 
-          <div className="w-full h-52 bg-gradient-to-r from-one via-two to-three flex justify-center items-center ">
-            <div className="w-full h-40 bg-white sm:skew-y-2 skew-y-6 flex justify-center items-center text-black font-medium sm:text-3xl text-xl">
-              <p>
-                Talk Now{" "}
-                <span className="btn bg-gradient-to-r from-one via-two to-three">
-                  Lets Talk
-                </span>
-              </p>
-            </div>
-          </div>
           <div id="project">
             <Project />
           </div>

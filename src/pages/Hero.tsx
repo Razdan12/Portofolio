@@ -1,4 +1,3 @@
-
 import Profil1 from "../assets/profil1.png";
 import purple1 from "../assets/3D/Clay_Purple0002.png";
 import segRed from "../assets/3D/Gon_3_Down_Standing_Outline0000.png";
@@ -27,11 +26,25 @@ const Hero = () => {
             </p>
             <p className="text-center">Frontend Engineer in Indonesia</p>
             <div className="flex justify-center gap-3 mt-5">
-              <div className="btn bg-gradient-to-r from-one via-two to-three rounded-full text-white font bold transform hover:scale-110 transition-transform duration-500">
-                Get in Touch
+              <div>
+                <a
+                  href="https://wa.me/6285158693933"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn bg-gradient-to-r from-one via-two to-three rounded-full text-white font bold transform hover:scale-110 transition-transform duration-500"
+                >
+                  Get in Touch
+                </a>
               </div>
-              <div className="btn btn-outline rounded-full font bold transform hover:scale-110 transition-transform duration-500">
-                View all work
+              <div>
+                <a
+                  href="https://github.com/Razdan12?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline rounded-full font bold transform hover:scale-110 transition-transform duration-500"
+                >
+                  View all work
+                </a>
               </div>
             </div>
           </div>

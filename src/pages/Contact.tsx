@@ -1,11 +1,11 @@
 import {
-    BsGithub,
-    BsTelegram,
-    BsLinkedin,
-    BsEnvelope,
-    BsSend,
-  } from "react-icons/bs";
-  
+  BsGithub,
+  BsTelegram,
+  BsLinkedin,
+  BsEnvelope,
+  BsSend,
+} from "react-icons/bs";
+
 const Contact = () => {
   return (
     <>
@@ -41,32 +41,67 @@ const Contact = () => {
               />
 
               <div className="flex w-full justify-end">
-                <div className="btn bg-gradient-to-r from-one via-two to-three text-black rounded-full h-12 mt-5">
+                <div >
+                <a
+                  href="https://wa.me/6285158693933"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn bg-gradient-to-r from-one via-two to-three text-black rounded-full h-12 mt-5"
+                >
                   <p>
-                    <BsSend />
+                  <BsSend />
                   </p>
-                  Send
+                  <p className="ml-2"> Send</p>
+                </a>
+                 
                 </div>
               </div>
             </div>
           </div>
           <div className="p-5 flex items-center">
             <div className="sm:text-2xl text-xl">
-              <div className="w-full flex gap-3 items-center mb-5 cursor-pointer">
-                <BsGithub />
-                <p>Razdan12</p>
+              <div >
+                <a
+                  href="https://github.com/Razdan12"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex gap-3 items-center mb-5 cursor-pointer"
+                >
+                  <p>
+                    <BsGithub />
+                  </p>
+                  <p className="ml-2">Razdan12</p>
+                </a>
               </div>
-              <div className="w-full flex gap-3 items-center mb-5 cursor-pointer">
-                <BsTelegram />
-                <p>Nurcahyanto</p>
+              <div >
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex gap-3 items-center mb-5 cursor-pointer"
+                >
+                  <p>
+                    <BsTelegram />
+                  </p>
+                  <p className="ml-2">Nurcahyanto</p>
+                </a>
               </div>
               <div className="w-full flex gap-3 items-center mb-5 cursor-pointer">
                 <BsEnvelope />
                 <p>nurcahyanto804@gmail.com</p>
               </div>
-              <div className="w-full flex gap-3 items-center mb-5 cursor-pointer">
-                <BsLinkedin />
-                <p>Nur Cahyanto</p>
+              <div >
+                <a
+                  href="https://www.linkedin.com/in/nurcah/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex gap-3 items-center mb-5 cursor-pointer"
+                >
+                  <p>
+                    <BsLinkedin />
+                  </p>
+                  <p className="ml-2">Nur Cahyanto</p>
+                </a>
               </div>
             </div>
           </div>
