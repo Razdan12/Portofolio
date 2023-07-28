@@ -1,83 +1,165 @@
 /* The switch - the box around the slider */
 .switch {
-    font-size: 17px;
-    position: relative;
-    display: inline-block;
-    width: 3.5em;
-    height: 2em;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #223243;
-    transition: .4s;
-    border-radius: 30px;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 1.4em;
-    width: 1.4em;
-    border-radius: 20px;
-    left: 0.3em;
-    bottom: 0.3em;
-    background-color: #223243;
-    box-shadow: inset 2px -2px 0 1.8px #fff;
-    transition: .4s;
-    animation: anima1 0.3s linear;
-  }
-  
-  @keyframes anima1 {
-    0% {
-      transform: translateX(1.5em);
-    }
-  
-    80% {
-      transform: translateX(-0.3em);
-    }
-  
-    100% {
-      transform: translateX(0em);
-    }
-  }
-  
-  .switch input:checked + .slider:before {
-    background-color: yellow;
-    box-shadow: none;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #223243;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.3em;
+  bottom: 0.3em;
+  background-color: #223243;
+  box-shadow: inset 2px -2px 0 1.8px #fff;
+  transition: 0.4s;
+  animation: anima1 0.3s linear;
+}
+
+@keyframes anima1 {
+  0% {
     transform: translateX(1.5em);
-    animation: anima 0.3s linear;
   }
-  @media (max-width: 400px) {
-    .switch input:checked + .slider:before {
-      transform: unset;
-     
-    }
+
+  80% {
+    transform: translateX(-0.3em);
   }
-  
-  @keyframes anima {
-    0% {
-      transform: translateX(0px)
-    }
-  
-    80% {
-      transform: translateX(1.6em)
-    }
-  
-    100% {
-      transform: translateX(1.4em)
-    }
+
+  100% {
+    transform: translateX(0em);
   }
+}
+
+.switch input:checked + .slider:before {
+  background-color: yellow;
+  box-shadow: none;
+  transform: translateX(1.5em);
+  animation: anima 0.3s linear;
+}
+@media (max-width: 400px) {
+  .switch input:checked + .slider:before {
+    transform: unset;
+  }
+}
+
+@keyframes anima {
+  0% {
+    transform: translateX(0px);
+  }
+
+  80% {
+    transform: translateX(1.6em);
+  }
+
+  100% {
+    transform: translateX(1.4em);
+  }
+}
+
+.box {
+  transition: 0.5s;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+  filter: blur(30px);
+}
+
+.box:hover:before,
+.box:hover:after {
+  transform: skewX(0deg) scaleX(1.3);
+}
+
+.box:before,
+.box:after {
+  background: linear-gradient(315deg, #ffbc00, #ff0058);
+}
+
+.box span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.1s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.box span::before {
+  top: -40px;
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+}
+
+.box span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  animation-delay: -1s;
+}
+
+.box span:after {
+  bottom: -40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+}
+
+.box .content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transform: 0.5s;
+
+}
