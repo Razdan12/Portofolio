@@ -11,7 +11,7 @@ const Project = () => {
           <div className="flex justify-between items-center w-full">
             <div className="w-full text-center">
               <div className="flex justify-center items-center flex-wrap gap-2">
-                <div className="w-80 text-left h-fit border-2 rounded-md bg-base-100 transform hover:scale-110 transition-transform duration-500 hover:z-20">
+                <div className="sm:w-80 w-60 text-left h-fit border-2 rounded-md bg-base-100 transform hover:scale-110 transition-transform duration-500 hover:z-20">
                   <img
                     src="https://balitteknologikaret.co.id/wp-content/uploads/2023/03/Project-Adalah-Penjelasan-Jenis-Karakteristik-dan-Contoh.jpg"
                     alt=""
@@ -51,7 +51,7 @@ const Project = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-80 text-left h-fit border-2 rounded-md bg-base-100 transform hover:scale-110 transition-transform duration-500 hover:z-20">
+                <div className="sm:w-80 w-60 text-left h-fit border-2 rounded-md bg-base-100 transform hover:scale-110 transition-transform duration-500 hover:z-20">
                   <img
                     src="https://balitteknologikaret.co.id/wp-content/uploads/2023/03/Project-Adalah-Penjelasan-Jenis-Karakteristik-dan-Contoh.jpg"
                     alt=""
@@ -90,7 +90,7 @@ const Project = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-80 text-left h-fit border-2 rounded-md bg-base-100 transform hover:scale-110 transition-transform duration-500 hover:z-20">
+                <div className="sm:w-80 w-60 text-left h-fit border-2 rounded-md bg-base-100 transform hover:scale-110 transition-transform duration-500 hover:z-20">
                   <img
                     src="https://balitteknologikaret.co.id/wp-content/uploads/2023/03/Project-Adalah-Penjelasan-Jenis-Karakteristik-dan-Contoh.jpg"
                     alt=""
